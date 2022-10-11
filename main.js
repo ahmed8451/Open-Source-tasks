@@ -75,3 +75,32 @@ while (str_len>=0){
 alert(result);
 
 
+                            // task-14
+
+// Asks the user for the length of an array in a dialog
+var user = parseInt(prompt("lenght of array"));
+var arr = [];
+var numOfReapeats = 0;
+var mostReapets = 1;
+var num;
+// Asks the user for each value in the array in a dialog
+while (user > 0){
+    var str = prompt("enter number: ")
+    arr.push(str);
+    user--;
+}
+// Outputs the most frequent number and the number of frequency in another dialog
+var len = arr.length-1;
+for (var i = 0; i<=len; i++){
+    for (var j=i; j <=len; j++){
+        if (arr[i]==arr[j]){
+            numOfReapeats++;
+            if (mostReapets < numOfReapeats){
+                mostReapets = numOfReapeats;
+                num = arr[i];
+            }
+        }
+    }
+    numOfReapeats=0;
+}
+console.log(num+" with frequency of "+mostReapets);
