@@ -6,7 +6,7 @@ var name = prompt("What's your name: ");
 // Outputs a welcome message with this name in another dialog
 alert("Welcome, " + name);
 
-                        task-3
+                        //task-3
 
 // Asks the user for a number in a dialog
 var num = parseInt(prompt("Please enter a number: "));
