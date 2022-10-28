@@ -104,3 +104,11 @@ for (var i = 0; i<=len; i++){
     numOfReapeats=0;
 }
 console.log(num+" with frequency of "+mostReapets);
+
+// Git task
+var user = prompt("enter your name?");
+var str_split = user.split("");
+var reverse_split = str_split.reverse();
+var merge_split = reverse_split.join("");
+
+console.log(merge_split);
