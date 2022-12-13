@@ -36,7 +36,7 @@ public class Staff : Person{
     }
     public override void Print() {
         Console.WriteLine
-        ($"Name: {Name}, Age: {Age}, Salary: {salary}");
+        ($"Name: {Name}, Age: {Age}, Salary: {Salary}");
     }
 
 }
@@ -45,6 +45,9 @@ public class Database{
     public Person[] People = new Person[50];
     public void AddStudent(Student student) {
         People[_currentIndex++] = student;
+    }
+    public void AddStaff(Staff staff) {
+        People[_currentIndex++] = staff;
     }
 }
 
