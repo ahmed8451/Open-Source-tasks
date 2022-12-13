@@ -1,30 +1,34 @@
 ﻿using System;
 // comment out the
 /* comment */
-namespace Rectangle{
-    class Rectangle{
-        double lenght;
-        double width;
+namespace Oop;
+public abstract class Person{
+    public string Name;
+    public int Age;
     
-        public void Values(){
-            lenght = 4;
-            width = 5;
-        }
-        public double GetArea(){
-            return lenght * width;
-        }
-        public void Display(){
-            Console.WriteLine("Lenght: " + lenght);
-            Console.WriteLine("Width: " + width);
-            Console.WriteLine("Area: "+ GetArea());
-        }
+    public Person(string name, int age){
+        Name = name;
+        Age = age;
     }
-    class ExcuteRectangle{
-        static void Main(string[] args){
-            Rectangle r = new Rectangle();
-            r.Values();
-            r.Display();
-            Console.ReadLine();
-        }
+        public abstract void Print();
+}
+public class Student : Person{
+    public int Year;
+    public float Gpa;
+    public Student(string name, int age, int Year, float Gpa) : base(name, age) 
+    { 
+        Year = year;
+        Gpa = gpa;
+    }
+    public override void Print() {
+        Console.WriteLine
+        ($"Name: {Name}, Age: {Age}, Gpa: {Gpa}");
+    }
+}
+public class Database{
+    private int _currentIndex;
+    public Person[] People = new Person[50];
+    public void AddStudent(Student student) {
+        People[_currentIndex++] = student;
     }
 }
