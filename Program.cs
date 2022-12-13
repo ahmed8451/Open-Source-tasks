@@ -25,6 +25,21 @@ public class Student : Person{
         ($"Name: {Name}, Age: {Age}, Gpa: {Gpa}");
     }
 }
+
+public class Staff : Person{
+    public double Salary;
+    public int JoinYear;
+    public Staff(string name, int age, double salary, int joinyear) : base(name, age) 
+    { 
+        Salary = salary;
+        JoinYear = joinyear;
+    }
+    public override void Print() {
+        Console.WriteLine
+        ($"Name: {Name}, Age: {Age}, Salary: {salary}");
+    }
+
+}
 public class Database{
     private int _currentIndex;
     public Person[] People = new Person[50];
@@ -44,6 +59,10 @@ public class Program{
         var year = Convert.ToInt32(Console.ReadLine());
         Console.Write("Gpa: ");
         var gpa = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Slary: ");
+        var salary = Convert.ToInt32(Console.ReadLine());
+        Console.Write("JoinYear: ");
+        var joinyear = Convert.ToInt32(Console.ReadLine());
         var student = new Student(name, age, year, gpa);
         database.AddStudent(student);
     }
