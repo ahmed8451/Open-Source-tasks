@@ -38,6 +38,7 @@ public class Staff : Person{
         Console.WriteLine
         ($"Name: {Name}, Age: {Age}, Salary: {Salary}");
     }
+    
 
 }
 public class Database{
@@ -48,6 +49,11 @@ public class Database{
     }
     public void AddStaff(Staff staff) {
         People[_currentIndex++] = staff;
+    }
+    public void PrintALL(){
+        foreach (var item in People){
+            item?.Print();
+        }
     }
 }
 
@@ -82,10 +88,7 @@ public class Program{
                 database.AddStaff(staff);
             }
             else if (option == 3){
-                foreach(var item in People)
-                {
-                    Console.WriteLine(item.ToString());
-                }
+                database.PrintALL();
             }
         }
     }
