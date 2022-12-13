@@ -69,11 +69,10 @@ public class Program{
             database.AddStudent(student);
         }
         else if (option ==2){
+            Console.Write("Name: ");
             var name = Console.ReadLine();
             Console.Write("Age: ");
             var age = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Year: ");
-            var year = Convert.ToInt32(Console.ReadLine());
             Console.Write("Slary: ");
             var salary = Convert.ToInt32(Console.ReadLine());
             Console.Write("JoinYear: ");
@@ -81,9 +80,23 @@ public class Program{
             var staff = new Staff(name, age, salary, joinyear);
             database.AddStaff(staff);
         }
-        
-        
-        
-        
+        else if (option == 3){
+            Console.Write("Name: ");
+            var name = Console.ReadLine();
+            Console.Write("Age: ");
+            var age = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Year: ");
+            var year = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Gpa: ");
+            var gpa = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Slary: ");
+            var salary = Convert.ToInt32(Console.ReadLine());
+            Console.Write("JoinYear: ");
+            var joinyear = Convert.ToInt32(Console.ReadLine());
+            var student = new Student(name, age, year, gpa);
+            database.AddStudent(student);
+            var staff = new Staff(name, age, salary, joinyear);
+            database.AddStaff(staff);
+        }
     }
 }
