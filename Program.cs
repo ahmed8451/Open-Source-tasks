@@ -111,11 +111,12 @@ public class Staff : Person {
     public int JoinYear{
         get { return _joinYear; }
         set { 
-                if(value < 21)
+                var compare = 2022 - (2022-Age);
+                if(compare <= 21)
                 {
                     throw new Exception("Invalid JoinYear");
                 }
-                _joinYear = value; 
+                _joinYear = compare; 
             }
     }
 
