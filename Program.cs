@@ -100,7 +100,7 @@ public class Staff : Person {
     public double Salary{
         get { return _salary; }
         set { 
-                if(value > 0 || value > 120000)
+                if(value < 0 || value > 120000)
                 {
                     throw new Exception("Invalid Salary");
                 }
@@ -156,7 +156,6 @@ public class Task
                 try{
                     var student = new Student(name, age, year, gpa);
                     database.AddStudent(student);
-                    student.Name = null;
                 }
                 catch(Exception e)
                 {
@@ -176,7 +175,7 @@ public class Task
                 try{
                     var staff = new Staff(name2, age2, salary, joinYear);
                     database.AddStaff(staff);
-                    staff.Name = null;
+                    
                 }
                 catch(Exception e)
                 {
@@ -192,7 +191,6 @@ public class Task
                 try{
                     var person = new Person(name3, age3);
                     database.AddPerson(person);
-                    person.Name = null;
                 }
                 catch(Exception e)
                 {
