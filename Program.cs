@@ -100,7 +100,7 @@ public class Staff : Person {
     public double Salary{
         get { return _salary; }
         set { 
-                if(value > 0 || value < 120000)
+                if(value > 0 || value > 120000)
                 {
                     throw new Exception("Invalid Salary");
                 }
