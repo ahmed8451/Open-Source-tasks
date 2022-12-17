@@ -155,6 +155,7 @@ public class Task
                 try{
                     var student = new Student(name, age, year, gpa);
                     database.AddStudent(student);
+                    student.Name = null;
                 }
                 catch(Exception e)
                 {
@@ -174,6 +175,7 @@ public class Task
                 try{
                     var staff = new Staff(name2, age2, salary, joinYear);
                     database.AddStaff(staff);
+                    staff.Name = null;
                 }
                 catch(Exception e)
                 {
